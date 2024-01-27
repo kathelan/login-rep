@@ -21,20 +21,19 @@ export default function LoginForm() {
                 </div>
 
                 <div className="remember-forgot">
-                    <label>
-                        <input type="checkbox"/>
-                        Remember me
-                    </label>
+                    <label><input type="checkbox"/>Remember me</label>
                     <a href="#">Forgot password?</a>
                 </div>
 
                 <button type="submit">Login</button>
 
                 <div className="register-link">
-                    <p>Don't have an account? <a href="#" onClick={(e) => {
+                    <p>Don't have an account?</p>
+                    <button onClick={(e) => {
                         e.preventDefault();
                         setIsRegister(true);
-                    }}>Register</a></p>
+                    }}>Register
+                    </button>
                 </div>
             </>
         )
@@ -58,15 +57,12 @@ export default function LoginForm() {
                 </div>
                 <button type="submit">Register</button>
                 <div className="register-link">
-                    <p>
-                        Already have an account?
-                        <a href="#" onClick={(e) => {
-                            e.preventDefault();
-                            setIsRegister(false);
-                        }}>
-                            Login
-                        </a>
-                    </p>
+                    <p>Already have an account?</p>
+                    <button onClick={(e) => {
+                        e.preventDefault();
+                        setIsRegister(false);
+                    }}>Login
+                    </button>
                 </div>
             </>
         )
